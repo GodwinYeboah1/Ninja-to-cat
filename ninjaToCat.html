@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- add my jquery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- css file -->
+        <style>
+            
+            *{
+                margin: 0;
+                padding: 0;
+
+            }
+
+            #wrapper{
+
+                /* centers all my div tags  */
+               text-align: center;
+             
+               background-color: rgb(48, 9, 48);
+               margin: 0, 88%;
+
+
+            }
+            img
+            {
+                margin: 10px;
+            }        
+        </style>
+
+    <!-- jquery file -->
+        <script>
+            // start the jquery library
+           $(document).ready( function(){
+
+            alert("Jquery is loaded ");
+        
+            $('img').click(function()
+            {
+                // display imagE BELLOW CAT
+                $(this).attr('temp',$(this).attr('src'));
+                $(this).attr('src', $(this).attr('alt-src'));
+                $(this).attr('alt-src', $(this).attr('temp'));
+            });
+
+
+           });
+        
+
+        
+        </script>
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <div class="imageSet" id="ninja0Bellow">
+
+            <img src="img/cat0.png"  alt-src="img/ninja0.png" temp=""/>
+            <!-- <img id ="nin1"src="img/ninja0.png"/> -->
+
+        </div>
+
+        <div class="imageSet" id="ninja1Bellow">
+            <img src="img/cat1.png" alt-src= "img/ninja1.png" temp=""/>
+        </div>
+
+        <div class="imageSet" id="ninja2Bellow">
+                <img src="img/cat2.png" alt-src="img/ninja2.png" temp=""/>
+            </div>
+         <div class="imageSet" id="ninja3Bellow">
+             <img src="img/cat3.png" alt-src="img/ninja3.png" temp=""/>
+         </div>
+
+         <div class="imageSet" id="ninja4Bellow">
+                <img src="img/cat4.png" alt-src="img/ninja4.png" temp=""/>
+            </div>
+
+    </div>
+
+</body>
+</html>
